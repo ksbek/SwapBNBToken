@@ -7,5 +7,5 @@ module.exports = function(deployer, network) {
     deployer.deploy(TestToken, 'Test', 'TEST');
   }
   deployer.deploy(TokenSwap);
-  deployer.deploy(SSTokenSwap);
+  deployer.deploy(SSTokenSwap, Math.floor(Date.now() / 1000), 20);
 };
